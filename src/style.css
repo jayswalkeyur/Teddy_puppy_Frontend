@@ -1,0 +1,41 @@
+@import url('/css/2gh-2btcjgkih.1962c.css');
+@import url('/css/10jf32vdx50lp.1962c.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+.site-root { min-height: 100vh; }
+.original-page-body { min-height: 100vh; }
+[data-reveal="true"], [data-aos] { transition: opacity .65s ease, transform .65s ease; }
+[data-reveal="true"]:not(.is-revealed), [data-aos]:not(.aos-animate) { opacity: 0; transform: translateY(14px); }
+[data-reveal="true"].is-revealed, [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
+.tp-not-found { min-height: 100vh; display: grid; place-content: center; text-align: center; padding: 2rem; color: #59432e; }
+.tp-not-found a { color: inherit; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal="true"], [data-aos] { transition: none; opacity: 1 !important; transform: none !important; }
+}
+.tp-lightbox-close { position: absolute; z-index: 2; top: 1rem; right: 1rem; border: 1px solid currentColor; border-radius: 999px; padding: .65rem 1rem; background: #30251e; color: #fff8ec; }
+.tp-lightbox-image { display: block; max-width: min(92vw, 1100px); max-height: 88vh; width: auto; height: auto; object-fit: contain; margin: 6vh auto 0; }
+.tp-lightbox-close { position: absolute; z-index: 2; top: 1rem; right: 1rem; border: 1px solid currentColor; border-radius: 999px; padding: .65rem 1rem; background: #30251e; color: #fff8ec; }
+.tp-lightbox-image { display: block; max-width: min(92vw, 1100px); max-height: 88vh; width: auto; height: auto; object-fit: contain; margin: 6vh auto 0; }
+.tp-form-status { margin-top: 1rem; padding: .85rem 1rem; border-radius: .75rem; background: #fff0d8; color: #59432e; font-size: .9rem; }
+/* TEMPORARY FIX: Make puppy profile details visible */
+.tp-storybook [data-reveal="true"]:not(.is-revealed),
+.tp-storybook [data-aos]:not(.aos-animate) {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Shared API feedback: visually quiet and scoped so captured page styles stay authoritative. */
+.tp-api-state { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.65rem; padding:.8rem 1rem; color:#59432e; font-size:.9rem; }
+.tp-api-state--error { color:#7b3026; }
+.tp-api-state__spinner { width:1rem; height:1rem; border:2px solid currentColor; border-right-color:transparent; border-radius:50%; animation:tp-api-spin .7s linear infinite; }
+.tp-api-state__retry { border:1px solid currentColor; border-radius:999px; padding:.35rem .8rem; font-weight:600; }
+@keyframes tp-api-spin { to { transform:rotate(360deg); } }
+.tp-form-status[data-status="success"] { background:#eaf5e8; color:#285a31; }
+.tp-form-status[data-status="error"] { background:#fff0ed; color:#8a2d20; }
+.tp-form-status[data-status="info"] { background:#fff0d8; color:#59432e; }
+.tp-form-status { overflow-wrap:anywhere; }
